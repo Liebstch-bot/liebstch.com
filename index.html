@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="wPLCZofZaEFjIvPKY0mpyt">
+<head data-page-node-id="9Hs5xJ0SEoaudyEtnphzV6">
+<meta charset="UTF-8" data-page-node-id="13Ak1YQZkTVBNUWKbkFMQJ" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="Eio2wYbnWpnixSpi91eNvP" />
+<title>黄浩东 · 大头 | 个人主页</title>
+<meta name="description" content="黄浩东（大头）的个人主页 — 985 中文系 + 0→1 创业者，正在做的事与旅行足迹。" data-page-node-id="6afUmgdHTpBSLdhHaNPDu4" />
+<link rel="preconnect" href="https://fonts.googleapis.com" data-page-node-id="JMK2TDNJ6Od1655rHb6ZOH" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin data-page-node-id="ShUSwZJhvPAFe9hMgctZok" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet" data-page-node-id="wJH37lHBjCQCsGEhtCvGn1" />
+<style>
+  :root {
+    --bg: #0b0e14;
+    --panel: rgba(255,255,255,0.035);
+    --panel-strong: rgba(255,255,255,0.07);
+    --border: rgba(255,255,255,0.09);
+    --border-strong: rgba(255,255,255,0.16);
+    --text: #e8eaef;
+    --text-dim: #9aa1b0;
+    --muted: #6a7080;
+    --accent: #f0b64a;
+    --accent-2: #e98d4a;
+    --accent-soft: rgba(240,182,74,0.14);
+    --good: #4ecb8d;
+    --blue: #7a9bff;
+    --radius: 18px;
+    --shadow: 0 20px 60px -20px rgba(0,0,0,0.65);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    font-family:'Noto Sans SC', system-ui, sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.7;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden; min-height:100vh;
+  }
+  body::before {
+    content:""; position:fixed; inset:0; z-index:-2;
+    background:
+      radial-gradient(900px 600px at 12% -8%, rgba(240,182,74,0.10), transparent 60%),
+      radial-gradient(800px 600px at 100% 0%, rgba(120,90,180,0.10), transparent 55%),
+      radial-gradient(1000px 700px at 50% 120%, rgba(60,120,180,0.08), transparent 60%),
+      var(--bg);
+  }
+  body::after {
+    content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+    background-image:radial-gradient(rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size:34px 34px;
+    mask-image:radial-gradient(ellipse at center, #000 40%, transparent 80%);
+  }
+
+  /* ===== 导航 ===== */
+  .nav { position:fixed; top:0; left:0; right:0; z-index:100; backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); background:rgba(11,14,20,0.72); border-bottom:1px solid var(--border); }
+  .nav-inner { max-width:1180px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+  .brand { display:flex; align-items:center; gap:12px; cursor:pointer; user-select:none; }
+  .brand-dot { width:34px; height:34px; border-radius:11px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); display:grid; place-items:center; font-weight:900; color:#1a1205; font-size:18px; box-shadow:0 6px 18px -6px rgba(240,182,74,0.6); }
+  .brand-name { font-weight:700; letter-spacing:.5px; }
+  .brand-sub { font-size:11px; color:var(--muted); letter-spacing:2px; text-transform:uppercase; }
+  .tabs { display:flex; gap:2px; overflow-x:auto; scrollbar-width:none; }
+  .tabs::-webkit-scrollbar { display:none; }
+  .tab-btn { background:none; border:none; cursor:pointer; color:var(--text-dim); font-size:14px; font-family:inherit; padding:9px 14px; border-radius:12px; white-space:nowrap; transition:color .25s, background .25s; position:relative; }
+  .tab-btn:hover { color:var(--text); background:var(--panel-strong); }
+  .tab-btn.active { color:var(--accent); background:var(--accent-soft); }
+  .tab-btn.active::after { content:""; position:absolute; left:14px; right:14px; bottom:3px; height:2px; background:linear-gradient(90deg,var(--accent),var(--accent-2)); border-radius:2px; }
+
+  .wrap { max-width:1180px; margin:0 auto; padding:96px 24px 72px; }
+  .view { display:none; animation:fadeUp .55s cubic-bezier(.2,.8,.2,1) both; }
+  .view.active { display:block; }
+  @keyframes fadeUp { from{opacity:0; transform:translateY(18px);} to{opacity:1; transform:none;} }
+
+  .hero { padding:24px 0 48px; }
+  .eyebrow { display:inline-flex; align-items:center; gap:8px; font-size:13px; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:22px; }
+  .eyebrow::before { content:""; width:26px; height:1.5px; background:var(--accent); }
+  .hero h1 { font-family:'Playfair Display', 'Noto Sans SC', serif; font-size:clamp(42px, 7vw, 76px); font-weight:800; line-height:1.05; letter-spacing:-1px; }
+  .hero h1 .thin { font-weight:300; font-style:italic; color:var(--text-dim); }
+  .hero h1 .hl { background:linear-gradient(120deg,var(--accent),var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .hero-sub { max-width:640px; margin-top:22px; font-size:18px; color:var(--text-dim); }
+  .hero-sub b { color:var(--text); font-weight:600; }
+  .chips { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+  .chip { padding:8px 16px; border-radius:999px; font-size:13.5px; background:var(--panel); border:1px solid var(--border); color:var(--text-dim); }
+  .chip.on { color:var(--accent); border-color:rgba(240,182,74,0.4); background:var(--accent-soft); }
+  .chip-link { cursor:pointer; transition:transform .2s, border-color .2s, color .2s, background .2s; user-select:none; }
+  .chip-link:hover { transform:translateY(-2px); color:var(--accent); border-color:rgba(240,182,74,0.45); background:var(--accent-soft); }
+  .chip-link .chip-arrow { font-style:normal; margin-left:2px; font-size:12px; opacity:.7; transition:transform .2s; }
+  .chip-link:hover .chip-arrow { transform:translate(2px,-2px); opacity:1; }
+  .hero-cta { display:flex; gap:14px; margin-top:34px; flex-wrap:wrap; }
+  .btn { display:inline-flex; align-items:center; gap:8px; cursor:pointer; padding:12px 22px; border-radius:14px; font-weight:600; font-size:15px; transition:transform .2s, box-shadow .2s, background .2s; text-decoration:none; font-family:inherit; }
+  .btn-primary { background:linear-gradient(120deg,var(--accent),var(--accent-2)); color:#1a1205; box-shadow:0 10px 30px -10px rgba(240,182,74,.55); border:none; }
+  .btn-primary:hover { transform:translateY(-2px); }
+  .btn-ghost { background:var(--panel); border:1px solid var(--border); color:var(--text); }
+  .btn-ghost:hover { background:var(--panel-strong); transform:translateY(-2px); }
+
+  .sec-head { margin-bottom:26px; }
+  .sec-head h2 { font-size:clamp(26px,4vw,38px); font-weight:800; letter-spacing:-.5px; }
+  .sec-head p { color:var(--text-dim); margin-top:8px; max-width:560px; }
+  .kicker { font-size:12px; letter-spacing:3px; text-transform:uppercase; color:var(--accent); font-weight:600; }
+
+  .card { background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:24px; position:relative; overflow:hidden; transition:transform .3s, border-color .3s, background .3s; }
+  .card:hover { transform:translateY(-4px); border-color:var(--border-strong); background:var(--panel-strong); }
+  .card h3 { font-size:18px; font-weight:700; margin-bottom:6px; }
+  .card p { color:var(--text-dim); font-size:14.5px; }
+
+  .about-hero { display:grid; grid-template-columns:240px 1fr; gap:34px; align-items:center; margin-bottom:34px; }
+  @media(max-width:760px){ .about-hero{grid-template-columns:1fr; text-align:center;} .about-hero .avatar-wrap{margin:0 auto;} }
+  .avatar-wrap { width:230px; height:230px; border-radius:30px; position:relative; background:linear-gradient(135deg,rgba(240,182,74,.35),rgba(120,90,180,.35)); padding:3px; box-shadow:var(--shadow); }
+  .avatar { width:100%; height:100%; border-radius:28px; object-fit:cover; background:#141a26; display:block; }
+  .about-quote { font-size:19px; color:var(--text); font-weight:500; line-height:1.8; }
+  .about-quote .hl { color:var(--accent); font-weight:700; }
+  .about-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:8px; }
+  @media(max-width:760px){ .about-stats{grid-template-columns:repeat(2,1fr);} }
+  .stat { text-align:center; padding:22px 12px; }
+  .stat .n { font-family:'Playfair Display',serif; font-size:40px; font-weight:800; color:var(--accent); }
+  .stat .l { color:var(--muted); font-size:13px; margin-top:4px; letter-spacing:1px; }
+
+  .skill-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  @media(max-width:900px){ .skill-grid{grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:600px){ .skill-grid{grid-template-columns:1fr;} }
+  .skill-card { background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:22px; transition:transform .3s, border-color .3s; }
+  .skill-card:hover { transform:translateY(-4px); border-color:rgba(240,182,74,.4); }
+  .skill-icon { width:48px; height:48px; border-radius:14px; display:grid; place-items:center; font-size:24px; margin-bottom:14px; background:var(--accent-soft); }
+  .skill-card h3 { font-size:17px; font-weight:700; }
+  .skill-card .tag-row { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+  .tag { font-size:12px; padding:4px 10px; border-radius:999px; background:rgba(255,255,255,0.05); border:1px solid var(--border); color:var(--text-dim); }
+  .level { margin-top:14px; height:5px; border-radius:99px; background:rgba(255,255,255,0.07); overflow:hidden; }
+  .level i { display:block; height:100%; border-radius:99px; background:linear-gradient(90deg,var(--accent),var(--accent-2)); }
+  .level-label { display:flex; justify-content:space-between; font-size:11px; color:var(--muted); margin-top:7px; }
+
+  .timeline { position:relative; padding-left:28px; }
+  .timeline::before { content:""; position:absolute; left:8px; top:6px; bottom:6px; width:2px; background:linear-gradient(var(--accent),transparent); }
+  .tl-item { position:relative; padding:0 0 28px 22px; }
+  .tl-item::before { content:""; position:absolute; left:-24px; top:7px; width:12px; height:12px; border-radius:50%; background:var(--bg); border:2.5px solid var(--accent); box-shadow:0 0 0 4px rgba(240,182,74,.12); }
+  .tl-date { font-size:12.5px; letter-spacing:1px; color:var(--accent); font-weight:600; text-transform:uppercase; }
+  .tl-title { font-size:19px; font-weight:700; margin-top:3px; }
+  .tl-org { color:var(--text-dim); font-size:14px; margin-top:2px; }
+  .tl-points { margin-top:10px; display:flex; flex-direction:column; gap:6px; }
+  .tl-point { display:flex; gap:10px; font-size:14.5px; color:var(--text-dim); }
+  .tl-point::before { content:"—"; color:var(--accent); flex-shrink:0; }
+
+  .honor-tag { display:inline-flex; align-items:center; gap:7px; padding:7px 14px; border-radius:999px; font-size:13px; background:var(--accent-soft); border:1px solid rgba(240,182,74,.3); color:var(--accent); margin:4px 6px 4px 0; }
+  .work-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  @media(max-width:760px){ .work-grid{grid-template-columns:1fr;} }
+  .work-card { padding:24px; }
+  .work-badge { font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+  .work-card h3 { font-size:20px; }
+  .work-card p { margin-top:8px; }
+  .work-metric { display:flex; gap:22px; margin-top:16px; }
+  .work-metric .m{ text-align:center; }
+  .work-metric .m .num { font-family:'Playfair Display',serif; font-size:28px; font-weight:800; color:var(--text); }
+  .work-metric .m .lab { font-size:11.5px; color:var(--muted); margin-top:2px; }
+  .work-thumb { width:100%; height:180px; object-fit:cover; border-radius:14px; margin-bottom:14px; }
+
+  .now-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  @media(max-width:760px){ .now-grid{grid-template-columns:1fr;} }
+  .now-card { padding:26px; }
+  .now-stage { display:inline-block; font-size:11px; letter-spacing:1px; padding:4px 11px; border-radius:999px; margin-bottom:12px; font-weight:600; }
+  .stage-active { color:var(--good); background:rgba(78,203,141,0.13); border:1px solid rgba(78,203,141,.3); }
+  .stage-soon { color:var(--accent); background:var(--accent-soft); border:1px solid rgba(240,182,74,.3); }
+  .now-card h3 { font-size:18px; }
+  .now-card p { margin-top:8px; font-size:14.5px; }
+  .now-img { width:100%; height:200px; object-fit:cover; border-radius:14px; margin-top:14px; }
+
+  /* ===== 足迹 ===== */
+  .atlas-hero { text-align:center; margin-bottom:30px; }
+  .atlas-stats { display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-top:18px; }
+  .atlas-stats .s { text-align:center; }
+  .atlas-stats .s .n { font-family:'Playfair Display',serif; font-size:42px; font-weight:800; color:var(--accent); }
+  .atlas-stats .s .l { color:var(--muted); font-size:13px; letter-spacing:1px; }
+  .map-wrap { position:relative; margin:8px auto 28px; max-width:900px; background:var(--panel); border:1px solid var(--border); border-radius:26px; padding:20px; }
+  .map-svg { width:100%; height:auto; display:block; }
+  /* simplemaps 中国省份默认绿色重写 */
+  #atlasMap svg path { fill: rgba(78,203,141,0.08); stroke: rgba(240,182,74,0.35); stroke-width:0.6; transition:fill .25s; }
+  #atlasMap svg g[__spot], #atlasMap svg g.spot-pin path { fill: none !important; stroke: none !important; }
+  #atlasMap svg path:hover { fill: rgba(240,182,74,0.18); }
+  .spot-pin { cursor:pointer; }
+  .spot-pin:hover .pin-core { transform:scale(1.3); }
+  .spot-pin .pin-core { transition:transform .25s; transform-box:fill-box; transform-origin:center; }
+  .spot-pin text { font-family:'Noto Sans SC'; font-size:12px; fill:var(--text); font-weight:600; }
+  .spot-pin .lbl { paint-order:stroke; stroke:#0b0e14; stroke-width:5px; }
+
+  /* 足迹列表卡 */
+  .spot-list { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  @media(max-width:900px){ .spot-list{grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:600px){ .spot-list{grid-template-columns:1fr;} }
+
+  /* ===== 模态框 ===== */
+  .modal { position:fixed; inset:0; z-index:200; display:none; align-items:center; justify-content:center; padding:24px; background:rgba(0,0,0,0.6); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); }
+  .modal.open { display:flex; animation:fadeIn .3s ease; }
+  @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+  .modal-card { background:var(--bg-2,#10141d); border:1px solid var(--border-strong); border-radius:24px; max-width:640px; width:100%; max-height:88vh; overflow-y:auto; padding:0; position:relative; animation:popIn .35s cubic-bezier(.2,.8,.2,1); }
+  @keyframes popIn { from{opacity:0; transform:translateY(20px) scale(.97);} to{opacity:1; transform:none;} }
+  .modal-img { width:100%; max-height:340px; object-fit:cover; border-radius:24px 24px 0 0; display:block; }
+  .modal-body { padding:26px 30px 30px; }
+  .modal-close { position:absolute; top:16px; right:16px; width:38px; height:38px; border-radius:50%; background:rgba(0,0,0,0.45); border:none; color:#fff; font-size:20px; cursor:pointer; display:grid; place-items:center; backdrop-filter:blur(6px); transition:background .2s, transform .2s; }
+  .modal-close:hover { background:rgba(0,0,0,0.7); transform:rotate(90deg); }
+  .modal-tag { display:inline-block; font-size:12px; letter-spacing:1px; padding:4px 12px; border-radius:999px; margin-bottom:12px; font-weight:600; }
+  .modal-body h3 { font-size:24px; font-weight:800; }
+  .meta { color:var(--muted); font-size:13px; margin-top:6px; letter-spacing:.5px; }
+  .feel { margin-top:16px; font-size:16px; line-height:2; color:var(--text); border-left:3px solid var(--accent); padding-left:16px; }
+
+  /* ===== 收藏模态框（书单 / 短片） ===== */
+  .coll-card-wide { max-width:860px; }
+  .coll-head { padding:30px 32px 22px; border-bottom:1px solid var(--border); }
+  .coll-head h3 { font-size:26px; font-weight:800; }
+  .coll-head .coll-sub { color:var(--muted); font-size:14px; margin-top:6px; }
+  .coll-body { padding:26px 32px 34px; }
+  .coll-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+  @media(max-width:640px){ .coll-grid{grid-template-columns:1fr;} }
+  .coll-card { background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:20px; transition:transform .25s, border-color .25s; }
+  .coll-card:hover { transform:translateY(-3px); border-color:rgba(240,182,74,.4); }
+  .coll-card .coll-tag { display:inline-block; font-size:11px; letter-spacing:1px; padding:3px 10px; border-radius:999px; background:var(--accent-soft); color:var(--accent); border:1px solid rgba(240,182,74,.3); margin-bottom:12px; font-weight:600; }
+  .coll-card h4 { font-size:17px; font-weight:700; color:var(--text); margin-bottom:4px; }
+  .coll-card .coll-meta { font-size:13px; color:var(--muted); margin-bottom:10px; }
+  .coll-card .coll-review { font-size:14px; color:var(--text-dim); line-height:1.85; }
+  .coll-card .coll-thumb { width:100%; height:150px; object-fit:cover; border-radius:12px; margin-bottom:14px; display:block; }
+  .coll-card .coll-btn { display:inline-flex; align-items:center; gap:6px; margin-top:14px; padding:8px 16px; border-radius:10px; background:linear-gradient(120deg,var(--accent),var(--accent-2)); color:#1a1205; font-weight:600; font-size:13.5px; text-decoration:none; transition:transform .2s, box-shadow .2s; }
+  .coll-card .coll-btn:hover { transform:translateY(-2px); box-shadow:0 8px 22px -8px rgba(240,182,74,.6); }
+  .coll-card .coll-btn.disabled { background:var(--panel-strong); color:var(--muted); cursor:default; border:1px dashed var(--border-strong); }
+  .coll-card .coll-btn.disabled:hover { transform:none; box-shadow:none; }
+
+  .region-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+  @media(max-width:760px){ .region-grid{grid-template-columns:1fr;} }
+  .region-card { padding:22px; }
+  .region-head { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
+  .region-emoji { width:44px; height:44px; border-radius:13px; display:grid; place-items:center; font-size:22px; background:var(--accent-soft); }
+  .region-card h4 { font-size:16px; font-weight:700; }
+  .region-card .sub { font-size:13px; color:var(--muted); }
+  .region-fold { font-size:14px; color:var(--text-dim); line-height:1.9; }
+  .region-fold b { color:var(--text); }
+
+  /* 爱好 Tab */
+  .hobby-grid { display:flex; flex-direction:column; gap:24px; }
+  .hobby-group-title {
+    font-size:14px; color:var(--muted); margin-bottom:12px;
+    letter-spacing:1px; text-transform:uppercase;
+    display:flex; align-items:center; gap:10px;
+  }
+  .hobby-group-title::after { content:""; flex:1; height:1px; background:var(--border); }
+  .hobby-cards {
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:16px;
+  }
+  .hobby-card { padding:0; overflow:hidden; cursor:pointer; transition:transform .25s ease,border-color .25s ease; }
+  .hobby-card:hover { transform:translateY(-4px); border-color:var(--border-strong); }
+  .hobby-img {
+    width:100%; aspect-ratio:16/10; display:grid; place-items:center;
+    background:var(--panel); position:relative; overflow:hidden;
+  }
+  .hobby-img .hobby-emoji { font-size:54px; opacity:.85; z-index:1; transition:transform .35s ease; }
+  .hobby-card:hover .hobby-emoji { transform:scale(1.15) rotate(-6deg); }
+  .hobby-img img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .35s ease; }
+  .hobby-card:hover .hobby-img img { opacity:.85; }
+  .hobby-meta { padding:14px 16px 16px; }
+  .hobby-meta h3 { margin:0 0 4px; font-size:16px; color:var(--text); }
+  .hobby-short { font-size:13px; color:var(--muted); }
+
+  .contact-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  @media(max-width:760px){ .contact-grid{grid-template-columns:1fr;} }
+  .contact-card { padding:24px; text-align:left; text-decoration:none; color:inherit; display:block; position:relative; }
+  .contact-card:hover { transform:translateY(-4px); border-color:var(--border-strong); background:var(--panel-strong); }
+  .contact-ico { width:50px; height:50px; border-radius:15px; display:grid; place-items:center; font-size:23px; margin-bottom:14px; }
+  .contact-card h3 { font-size:16px; }
+  .contact-card p { font-size:13.5px; color:var(--muted); margin-top:3px; }
+  .contact-card .handle { color:var(--accent); font-weight:600; font-size:15px; margin-top:6px; word-break:break-all; }
+  .contact-card.is-copy { cursor:pointer; }
+  .copy-toast {
+    position:absolute; right:18px; top:18px;
+    background:linear-gradient(120deg,var(--good),#34a872);
+    color:#04190f; padding:6px 12px; border-radius:999px;
+    font-size:12px; font-weight:700; letter-spacing:.5px;
+    opacity:0; transform:translateY(-6px) scale(.94);
+    pointer-events:none;
+    transition: opacity .28s cubic-bezier(.2,.8,.2,1), transform .28s cubic-bezier(.2,.8,.2,1);
+    box-shadow:0 8px 22px -6px rgba(78,203,141,.55);
+    white-space:nowrap; z-index:2;
+  }
+  .contact-card.copied .copy-toast { opacity:1; transform:translateY(0) scale(1); }
+  .contact-card.copy-fail .copy-toast {
+    background:linear-gradient(120deg,#ff8585,#e66);
+    box-shadow:0 8px 22px -6px rgba(255,90,90,.5);
+  }
+  .contact-card .copy-hint { font-size:11.5px; color:var(--muted); margin-top:4px; letter-spacing:.5px; }
+
+  .foot { text-align:center; color:var(--muted); font-size:13px; margin-top:64px; padding-top:24px; border-top:1px solid var(--border); }
+  .foot .heart { color:var(--accent); }
+
+  .hint { text-align:center; color:var(--muted); font-size:13px; margin-top:-14px; margin-bottom:22px; }
+</style>
+</head>
+<body data-page-node-id="KRgqcj7lfZzKKIN8YxcAGo">
+
+<nav class="nav" data-page-node-id="0aWUuyjh98kaXE1AckE2pv">
+  <div class="nav-inner" data-page-node-id="P4j0UUxiUvb2uwbNbzRflR">
+    <div class="brand" onclick="switchView('about')" data-page-node-id="W1xFLCxXgBnZi8yZAkRH79">
+      <div class="brand-dot" data-page-node-id="3dgVcTFM6WlZ9ZZarfUoZj">头</div>
+      <div data-page-node-id="keUAD1ivxoGMJf8CULvIsw">
+        <div class="brand-name" data-page-node-id="4CLsZpwuE19fB1JvCxmS2w">黄浩东</div>
+        <div class="brand-sub" data-page-node-id="tn80g2LNHX1sVcfICrDJVk">DA TOU · PERSONAL</div>
+      </div>
+    </div>
+    <div class="tabs" id="tabs" data-page-node-id="rPSdoIkdULiRFLBhsE70LB">
+      <button class="tab-btn active" data-view="about" onclick="switchView('about')" data-page-node-id="ddjiz9dvueg5yl0iOOypEx">关于</button>
+      <button class="tab-btn" data-view="skills" onclick="switchView('skills')" data-page-node-id="UQIRDAy3txMbLFqbQ4PNZZ">技能</button>
+      <button class="tab-btn" data-view="journey" onclick="switchView('journey')" data-page-node-id="mTMVNMUXoNvt2EMbiwoXtF">履历</button>
+      <button class="tab-btn" data-view="works" onclick="switchView('works')" data-page-node-id="1KhmwOAsjAzeAKCH3tcZM8">作品</button>
+      <button class="tab-btn" data-view="now" onclick="switchView('now')" data-page-node-id="2AUg91DaZJN6OFg0imW8Yy">在做</button>
+      <button class="tab-btn" data-view="atlas" onclick="switchView('atlas')" data-page-node-id="zUmElDJ0r4XGCjs2lCNyEI">足迹</button>
+      <button class="tab-btn" data-view="hobby" onclick="switchView('hobby')" data-page-node-id="Hb6HdHdHdHdHdHdHdHd06H">爱好</button>
+      <button class="tab-btn" data-view="contact" onclick="switchView('contact')" data-page-node-id="llIGw29XDj8qDGUBb9NmdN">联系</button>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap" data-page-node-id="jQyyczH6gG1Ee2eDKy9G0b">
+
+  <!-- 关于 -->
+  <section class="view active" id="view-about" data-page-node-id="BAIu6ll3EA0ufSXSk643lc">
+    <div class="hero" data-page-node-id="aHTFFQ4y3tpZww5fEjYZAJ">
+      <div class="eyebrow" data-page-node-id="P5aJbyYoAQJvrE3oPGm7ac">Hey, I'm 大头</div>
+      <h1 data-page-node-id="4CRIRCm2efx41JV7gOzQaR">从广西小城出发，<br data-page-node-id="0Di3UJTJqNbIBgWTJPp4W2"/><span class="thin" data-page-node-id="TJploeWyJ0cFZNvscrzBz3">把</span><span class="hl" data-page-node-id="KfKfZQ4r9Uo7aPr9GFN3l5">想法</span><span class="thin" data-page-node-id="lKX4p6tBdE9UDxW7MJqwIp">做成</span><span class="hl" data-page-node-id="KAVolDroCZjijJghvWud06">产品</span><span class="thin" data-page-node-id="TswmjMIHs648ABCV2CoUtC">的人</span></h1>
+      <p class="hero-sub" data-page-node-id="xjWBBsxu3DHPzO3H7lTrk6">985 中文系在读，同时也是个 <b data-page-node-id="7yE9HeBGKsOmdFE8yPGR5m">0→1 的校园创业者</b>。写过 5.3w 用户的产品，做过万人参与的直播，拿过国家级赛事第一名。<b data-page-node-id="hxjBbLcKNtsZZL3lP6IqAZ">相信文字与数据，能把一件事真正做成。</b></p>
+      <div class="chips" data-page-node-id="MRdip3cYsFhgASp4N5wVKx">
+        <span class="chip on" data-page-node-id="5zFxr8sjtCBnmbcWFQ1Hlp">🌏 汉语言文学 · 川大</span>
+        <span class="chip on" data-page-node-id="MGztdEp4AZXqnKy5UROeY9">🚀 00后创业者</span>
+        <span class="chip" data-page-node-id="dYwEZuJbKLCaCf6UceOXm7">✍️ 擅长文字表达</span>
+        <span class="chip" data-page-node-id="CiBT7KXRvCpmwcwITVXayA">📊 数据驱动</span>
+        <span class="chip" data-page-node-id="HIKcFQino4X43FRVA9xrYC">🧭 正在学 Vibe Coding</span>
+      </div>
+      <div class="hero-cta" data-page-node-id="d4MDYUjnGP9OhBXxStIcZD">
+        <button class="btn btn-primary" onclick="switchView('contact')" data-page-node-id="VekOTFjDUCyiAI9i77PaKf">📮 联系我</button>
+        <button class="btn btn-ghost" onclick="switchView('works')" data-page-node-id="0ID8PJUWAFlyBZmkUWWRPZ">🎯 看看我做过什么</button>
+      </div>
+    </div>
+
+    <div class="about-hero" data-page-node-id="KhU5KX2fMPDAoI08ZCt0Nv">
+      <div class="avatar-wrap" data-page-node-id="tsCwxdUFgxR3Mipdc1RzUM">
+        <img class="avatar" src="assets/q-avatar.png" alt="大头 Q版头像" data-page-node-id="fTrxPUNq1PiHRMEmtu0O3K" />
+      </div>
+      <div data-page-node-id="y6reubeFkudrGEwMwXkMU1">
+        <div class="kicker" data-page-node-id="NMlg6PrE1t4kOpwjJ4dutA">About Me</div>
+        <p class="about-quote" style="margin-top:12px;" data-page-node-id="P7LF16YPpkZiGTT4dsPdHy">
+          我来自湖南永州，在广西一个被喀斯特群山环抱的小城长大。那里教会我——<span class="hl" data-page-node-id="4WUewTyw9yS5mR93YAX89u">越是平实的地方，越藏着能把事情做成的韧劲。</span>
+          后来我来到成都，在川大读中文，却一头扎进了互联网与创业。我喜欢把<span class="hl" data-page-node-id="q775oX2cWWeXXUkHaYmAnA">浪漫的表达</span>和<span class="hl" data-page-node-id="TutcgTpxJ84Yl6xIgoWAc4">理性的数据</span>揉在一起，去做一些真正被需要的东西。
+        </p>
+        <div class="chips" style="margin-top:18px;" data-page-node-id="Xa79Av4FTveXxhC1msa2hu">
+          <span class="chip" data-page-node-id="YAjdz17tJG01LCfcEG4Fjc">🏔️ 坐标 · 成都</span>
+          <span class="chip chip-link" onclick="openCollection('books')" role="button" tabindex="0">📚 爱读书 · 爱写故事 <i class="chip-arrow">↗</i></span>
+          <span class="chip chip-link" onclick="openCollection('films')" role="button" tabindex="0">🎬 拍短片 · 剪视频 <i class="chip-arrow">↗</i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-stats" data-page-node-id="MKJCixHeXYNrFZOwWFijVB">
+      <div class="card stat" data-page-node-id="bs7cVl7HaER451NH23ALNk"><div class="n" data-page-node-id="dPB5EEIv3uD3zt07GDjdmG">53k</div><div class="l" data-page-node-id="bS1XmUaptGSib6w1HoSjDQ">累计注册用户</div></div>
+      <div class="card stat" data-page-node-id="GIAfBBhBmuQIJduVMC1o2l"><div class="n" data-page-node-id="lFUq0jVrfxSSQtaWn9opl2">4k+</div><div class="l" data-page-node-id="rTjAlHJMPPe4xMcu0sKZ84">产品日活</div></div>
+      <div class="card stat" data-page-node-id="GNF1KmjgfzA9PgIgNUljAq"><div class="n" data-page-node-id="BGoiQzFGvLQz5Yw2BrGzvu">5+</div><div class="l" data-page-node-id="pHnANs7AmG6XrZ9FkdPuiQ">高校合作团队</div></div>
+      <div class="card stat" data-page-node-id="fXFLnHYN4HSbIN5WnEAX5K"><div class="n" data-page-node-id="LHS86fHdiKXkl28lA4dWHH">32</div><div class="l" data-page-node-id="OJ2GcrbHbDr911eC9tqdMH">走过的城市</div></div>
+    </div>
+  </section>
+
+  <!-- 技能 -->
+  <section class="view" id="view-skills" data-page-node-id="EYlMMcFTyzUByJDpZYGSCO">
+    <div class="sec-head" data-page-node-id="aVaBZNQBXJHHGAz6Ccd6fF">
+      <div class="kicker" data-page-node-id="MjTdzmEDDc9IlfoSRRerVm">Skills</div>
+      <h2 data-page-node-id="ayHOGrawTZEubpAskWXAEE">我的技能池</h2>
+      <p data-page-node-id="MPvPAtNDsSCVFD4xm9s5I6">中文系的表达底子 + 创业实战磨出来的运营手感 + 正在进化的技术能力。</p>
+    </div>
+    <div class="skill-grid" id="skillGrid" data-page-node-id="p6qhw96OZjVRVHM8u5ATpf"></div>
+  </section>
+
+  <!-- 履历 -->
+  <section class="view" id="view-journey" data-page-node-id="VbMfZKqF8whrgzHLb00d8R">
+    <div class="sec-head" data-page-node-id="ALNQkPT5EKVCJjIbJ1w5Qh">
+      <div class="kicker" data-page-node-id="HV1TM7K7jdvDMQU3YCwGVR">Journey</div>
+      <h2 data-page-node-id="DAzZfw13tlPGIA1KdcCtJJ">走过的路</h2>
+      <p data-page-node-id="w6rVSDfrZiEfWbFZSz1ozB">从校园学生工作，到带队做产品，再到一个人打一场仗。</p>
+    </div>
+    <div class="timeline" id="timeline" data-page-node-id="bUESFSVWveczPV72rsvCNG"></div>
+  </section>
+
+  <!-- 作品 -->
+  <section class="view" id="view-works" data-page-node-id="Kq65d2Vq6r0M94lCNqZaPD">
+    <div class="sec-head" data-page-node-id="l5paGS0PdVmRRkp9uTP8HA">
+      <div class="kicker" data-page-node-id="np8oDYi77D0kgOIWj4PVJc">Works</div>
+      <h2 data-page-node-id="wD8TU3xLzodlXAsT7ApCGe">做过的事</h2>
+      <p data-page-node-id="K5NXRAueNvLmjzUjl3WItj">那些从 0 长出来、真正留下痕迹的东西。</p>
+    </div>
+    <div class="honor-row" id="honors" data-page-node-id="16CYKGCCBmnj6ycOYiglLF"></div>
+    <div class="work-grid" id="worksGrid" style="margin-top:18px;" data-page-node-id="qGCeMKrqJcEG4bSNWhZAEm"></div>
+  </section>
+
+  <!-- 在做 -->
+  <section class="view" id="view-now" data-page-node-id="tqFEFekjp99vvVhCrS5lgf">
+    <div class="sec-head" data-page-node-id="pIVpSNqxHwdh1B3aSAoJuC">
+      <div class="kicker" data-page-node-id="8DP9rbJ9CZZJxvZRVpkNqJ">Now</div>
+      <h2 data-page-node-id="nsoDTq2i3NMi54kS4NMqx1">我正在做的事</h2>
+      <p data-page-node-id="2L3JvuaxludNmfUg7VlaQh">把时间花在真正值得的地方。</p>
+    </div>
+    <div class="now-grid" data-page-node-id="UcD2ZMdlp3cPURJX5PDR6J">
+      <div class="card now-card" data-page-node-id="2B3Y5TYsOW3Lc3AAzhBgTx">
+        <span class="now-stage stage-active" data-page-node-id="uAN3dKC8xLCqHjQt36ewHR">● 进行中</span>
+        <h3 data-page-node-id="QIU2DmfIg15y3tStYjkrCL">小竹校友圈 · 持续迭代</h3>
+        <p data-page-node-id="j6Vyt5TCppm7okGLB0b8Nk">作为联合发起人，我在打磨这个从 0 走到 5.3w 用户的校园产品——迭代功能、沉淀可复用的运营 SOP，也在思考它更长远的样子。</p>
+      </div>
+      <div class="card now-card" data-page-node-id="FBhZ1Xp8mwZOWLISB1zr0R">
+        <span class="now-stage stage-active" data-page-node-id="ytR2f4RJjZh5stNI1HRAP2">● 进行中</span>
+        <h3 data-page-node-id="u2kaCQvHpwdxwe1Yzf2AAB">学习 Vibe Coding</h3>
+        <p data-page-node-id="GcQkBrA7aOwDGlEhGeChQG">正在用 AI 辅助的方式学习编程与产品搭建——让工具为我所用，把脑子里的想法更快变成能跑起来的东西。</p>
+      </div>
+      <div class="card now-card" data-page-node-id="eEKn9MPYKNfrVRkJ4LUGOF">
+        <span class="now-stage stage-soon" data-page-node-id="PMEJ1vNv0shdHb76TCSaGB">▸ 谋划中</span>
+        <h3 data-page-node-id="urU8i1H74MqqGzMD73GFe6">探索「一人公司」</h3>
+        <p data-page-node-id="RSlRKR0Iili9UlzP8klwCv">在学习 solopreneur 的思路：一个人也能靠产品与内容，活成一家公司。</p>
+      </div>
+      <div class="card now-card" data-page-node-id="GzWy9FNqvcVtVaUzQNVYsS">
+        <span class="now-stage stage-active" data-page-node-id="9ruFM8fCbhzf6wbkx4Szi3">● 保持中</span>
+        <h3 data-page-node-id="MstDgKNKwUccXLepO2mAtz">规律训练 · 保持体能</h3>
+        <p data-page-node-id="EUwTlGMddJMp2sO50tVTcS">创业和创作都需要好状态，坚持健身，把体能当成长期投资。</p>
+        <img src="assets/gym.jpg" alt="健身" class="now-img" style="height:220px;" data-page-node-id="2lB4ZU7iuQ0tt7CtKyv9Mu" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 足迹 -->
+  <section class="view" id="view-atlas" data-page-node-id="5nIpjC6aHkr3t2xGca1H8g">
+    <div class="atlas-hero" data-page-node-id="eHwSTiQhGVg17z635skBBW">
+      <div class="kicker" style="margin-bottom:10px;" data-page-node-id="9ofGrzjnWbBF3E9wYDAOCH">Atlas · 旅行足迹</div>
+      <h2 style="font-size:clamp(28px,4vw,42px);font-weight:800;" data-page-node-id="VsTEgiInepz0m6Bl2lTPFW">在广西的喀斯特小城长大，<br data-page-node-id="iAXNHZi5vIikRcYr3kN8Xd"/>一路走到了山川与旷野。</h2>
+      <div class="atlas-stats" data-page-node-id="Z0y2GDQzemzoJLqCS0wT9G">
+        <div class="s" data-page-node-id="y6WSWSxB7qFYbhMjTHowAY"><div class="n" data-page-node-id="OcsfMkBVEcRUp0jzz1vP7g">1</div><div class="l" data-page-node-id="GvQwxwNVumhuOakg7TkzzC">国家</div></div>
+        <div class="s" data-page-node-id="1GUfet2QSAkTW51EVok1K9"><div class="n" data-page-node-id="g9ovKDY7yeYk94C3naBXmw">32</div><div class="l" data-page-node-id="3NWfsZp6R9PtA32ALiC80v">城市</div></div>
+        <div class="s" data-page-node-id="SqUrcZMHYb1gqAIj9KTqoj"><div class="n" data-page-node-id="wXwV1LyYDnkSlzGKNXrFNi">7</div><div class="l" data-page-node-id="oUjXyrUddCtKbxRNio9GY3">天 · 青甘环线</div></div>
+      </div>
+    </div>
+
+    <p class="hint" data-page-node-id="EG3hPAb9neBk2ZpEXzG7Wv">👆 点地图上的彩色圆点，看看那里留下的照片和当时的感受</p>
+    <div class="map-wrap" id="atlasMap" data-page-node-id="xJbmM8ERk3v3eADpudCNUH"></div>
+
+    <!-- 足迹卡片列表 -->
+    <div class="spot-list" id="spotList" data-page-node-id="Gvko15e9dBBkY58P5fTeYk"></div>
+
+    <div class="region-grid" style="margin-top:26px;" data-page-node-id="sZr5yBhCfjbpHsyFNXvFMS">
+      <div class="card region-card" data-page-node-id="WZWKH8FcLtH1n670eBbgc9">
+        <div class="region-head" data-page-node-id="kPpVhcKzMtmJKNGhNCUW9Y">
+          <div class="region-emoji" data-page-node-id="OJDULkjOiC9Kx7ROY5EhwG">🏔️</div>
+          <div data-page-node-id="bzxDBAHOLyHx2ZboD8HICA"><h4 data-page-node-id="ImAFLSjqbTGSqOdAWAVqbw">故乡 · 广西河池</h4><div class="sub" data-page-node-id="ICuKI8eD096PwYdYDWH1qV">在群山环抱的喀斯特小城长大</div></div>
+        </div>
+        <p class="region-fold" data-page-node-id="9RwF0HBWFnui59DKIMlDe0">这里没有大城市的喧嚣，却有最清澈的山水。喀斯特地貌的峰丛与溪流，塑造了我对世界的初印象——<b data-page-node-id="qwCFOetvyWqCqS0alzp6Qw">也让我学会在安静的土壤里，慢慢长出属于自己的东西。</b></p>
+      </div>
+      <div class="card region-card" data-page-node-id="ZVcqnUhBvZ7ijn853WN4gG">
+        <div class="region-head" data-page-node-id="lHpYsqVDEDFsAaxnXAHmYi">
+          <div class="region-emoji" data-page-node-id="OtgR8Q1IPV9xhSpD55QlgC">🏡</div>
+          <div data-page-node-id="fae6eOpXANQ7AKtoOcGL6y"><h4 data-page-node-id="fBHqWmB0fpWkiNL7o18NpB">根 · 湖南永州</h4><div class="sub" data-page-node-id="53zuPZPdGmhXS45zxJbqyg">来自潇湘之畔</div></div>
+        </div>
+        <p class="region-fold" data-page-node-id="QZ827cHkSoxwRNBFxYeQGY">地理上的来处。柳宗元笔下「永州之野」的土地，<b data-page-node-id="AbNTyGiEqBsZPXOmPCmW5y">一种朴素的文人气质</b>，或许也悄悄长进了我的骨子里。</p>
+      </div>
+      <div class="card region-card" data-page-node-id="LpRCPkIQMQadKf4p7twSbc">
+        <div class="region-head" data-page-node-id="BCw4VH272iH8euWE737cbC">
+          <div class="region-emoji" data-page-node-id="FjKPE1C7wogsxyaogvxTUL">🌄</div>
+          <div data-page-node-id="KPp0Y3gYSnC9TflgumxfuC"><h4 data-page-node-id="OusaEVdXCashjuEkoS9DE6">云贵川 · 基本溜达</h4><div class="sub" data-page-node-id="uP58XrvZEnykHGdqXQFdpE">西南的山与城</div></div>
+        </div>
+        <p class="region-fold" data-page-node-id="mbzNis4dEXbkJBtQIfmODO">云贵川基本都走遍了。在四川求学、在云南贵州看山看云、吃遍街头巷尾。<b data-page-node-id="elVeR1OAAxN9c3Nuwrxi0w">西南的烟火气，是我最熟悉的生活底色。</b></p>
+      </div>
+      <div class="card region-card" data-page-node-id="1ZrlgrleePM1dxWCCbnGfD">
+        <div class="region-head" data-page-node-id="B5RBcg1fgLe7TPTml1ObYN">
+          <div class="region-emoji" data-page-node-id="JX0hnbHXsVT5I6aBtpvd6Y">🏜️</div>
+          <div data-page-node-id="Fd5LvF1KQwXDz30p1BYicm"><h4 data-page-node-id="hDMOEm4C88bj4aZIfzgSDo">青甘大环线 · 七天自驾</h4><div class="sub" data-page-node-id="U0KeJ3thHRWi3Wa64YaKxB">青海湖到敦煌的旷野</div></div>
+        </div>
+        <p class="region-fold" data-page-node-id="NaE5f24WbmonK8nWC2G1B0">七天自驾，从青海湖到茶卡、到敦煌的戈壁与鸣沙山。<b data-page-node-id="tfxURIfX5Uhs6qbS2CAU6H">车轮碾过荒芜，才懂得辽阔的意义。</b>那是我见过最震撼的风景，也让我确信——人要多去旷野里走走。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 爱好 -->
+  <section class="view" id="view-hobby" data-page-node-id="Hb0y2026HdAbBy00NoDeFo">
+    <div class="sec-head" data-page-node-id="Hb1Hd0HdHdHdHdHdHb01He">
+      <div class="kicker" data-page-node-id="Hb2HdHdHdHdHdHdHdHd02H">Hobbies</div>
+      <h2 data-page-node-id="Hb3HdHdHdHdHdHdHdHd03H">在动笔之前，先在动</h2>
+      <p data-page-node-id="Hb4HdHdHdHdHdHdHdHd04H">我把这些爱好排成三行：从身体出发，让眼睛接住，再用嘴把它唱出来——最后一把火留给自己。</p>
+    </div>
+    <div class="hobby-grid" id="hobbyGrid" data-page-node-id="Hb5HdHdHdHdHdHdHdHd05H"></div>
+  </section>
+
+  <!-- 联系 -->
+  <section class="view" id="view-contact" data-page-node-id="Q9P1J2yIGVClRFL1GmNtPT">
+    <div class="sec-head" data-page-node-id="KOjGfmK4bEowG0HuD3mGEH">
+      <div class="kicker" data-page-node-id="bK1OsGdqkDD7j26FgB1bAU">Contact</div>
+      <h2 data-page-node-id="nkJIoqhmyQ1YAawIy6sBaI">找到我</h2>
+      <p data-page-node-id="HxCnjB8Wm61i61PEECN8qj">想聊聊合作、产品、文字，或者只是交个朋友——都欢迎。</p>
+    </div>
+    <div class="contact-grid" data-page-node-id="XRDkkYCwcHUu4zNTyPGWK4">
+      <a class="card contact-card is-copy" href="javascript:void(0)" onclick="copyContact('2686263198@qq.com',this,'邮箱已复制 ✉️');return false;" data-page-node-id="d0Q7IfbOZO4yahEYZGYTe5">
+        <div class="contact-ico" style="background:var(--accent-soft);" data-page-node-id="RIn88H7Bs82EAcz3XMjMDg">📮</div>
+        <h3 data-page-node-id="S7nBNxfUodlJxCL6zfOXqb">邮箱</h3><p data-page-node-id="t0ceBJhOAtZNf0TU8kCSyj">工作 &amp; 合作 · 点击复制</p>
+        <div class="handle" data-page-node-id="NLn9HUtBzDGroLAhWfb3au">2686263198@qq.com</div>
+        <div class="copy-hint" data-page-node-id="Ah1Bz0Xk8tUuMhJ0aPzQbK">点击卡片复制地址</div>
+        <span class="copy-toast" data-page-node-id="xYpZwQr2MskT1nvGfH4LcE"></span>
+      </a>
+      <a class="card contact-card" href="https://xhslink.cn/o/5Z7VHIVCunS" target="_blank" rel="noopener" data-page-node-id="fR51whWDwp52mFMG46W8bL">
+        <div class="contact-ico" style="background:rgba(255,80,80,.15);" data-page-node-id="07JTvmOzsxxruiUnF32N09">📕</div>
+        <h3 data-page-node-id="K8omzScFd1sLC5nKMofAeE">小红书</h3><p data-page-node-id="UK846TPT6TVEbirDBwjUbz">记录日常与思考 · 直接跳转主页</p>
+        <div class="handle" data-page-node-id="KqW0exBU7DHHAI9ti733pn">@小川大头 ↗</div>
+        <div class="copy-hint">已收录 2673 次赞与收藏</div>
+      </a>
+      <a class="card contact-card" href="https://v.douyin.com/qu-z-rNfw2c/" target="_blank" rel="noopener" data-page-node-id="54bOcZME87m2tzEDEFb0gB">
+        <div class="contact-ico" style="background:rgba(30,30,30,.4);" data-page-node-id="loqy7Lg2EsOQE0VRHw3pRz">🎬</div>
+        <h3 data-page-node-id="IyaD8SiuJeJjU25AELVeUG">抖音</h3><p data-page-node-id="2er8V9XQr2y01aHdPGz451">视频与创作 · 直接跳转主页</p>
+        <div class="handle" data-page-node-id="siomNZrR56nWqMWuATsCrC">@大头我吃吃吃 ↗</div>
+        <div class="copy-hint">短视频 · 影像创作</div>
+      </a>
+      <a class="card contact-card" href="https://github.com/" target="_blank" rel="noopener" data-page-node-id="0ewNhQHRT3JseNK2WE6Stv">
+        <div class="contact-ico" style="background:rgba(120,90,180,.18);" data-page-node-id="Dn6872CRFroeLSDRKWp71F">🐙</div>
+        <h3 data-page-node-id="rsbF4MU3PPfTTRM2C2aReU">GitHub</h3><p data-page-node-id="3ymdykoGDb1BJhHB95kYD8">代码与实验</p>
+        <div class="handle" data-page-node-id="SvEMle6YFgElGq4tGXOguG">@dato <span style="color:var(--muted);font-weight:400;" data-page-node-id="sFxiqJzGd0xYOa0jQtqKW8">(整理中)</span></div>
+      </a>
+      <a class="card contact-card is-copy" href="javascript:void(0)" onclick="copyContact('Myliebstch',this,'微信号已复制 💬');return false;" data-page-node-id="nv1xMZnOCdwZePAABaVpee">
+        <div class="contact-ico" style="background:rgba(78,203,141,.15);" data-page-node-id="9iMqbaqtHcAjzc4gXyaEZV">💬</div>
+        <h3 data-page-node-id="GIWdY7JrzM6mhC2tsqYm4u">微信</h3><p data-page-node-id="MsoiWWO1GITnPSSnCSgGaA">加好友请备注来意 · 点击复制</p>
+        <div class="handle" data-page-node-id="RIT5pTMPsbVnF9QYudDJE3">Myliebstch</div>
+        <div class="copy-hint">点击卡片复制</div>
+        <span class="copy-toast" data-page-node-id="J7tQqL5mXkR2vN8cY1PzUd"></span>
+      </a>
+    </div>
+  </section>
+
+  <div class="foot" data-page-node-id="bELiVK02Y0cjsEUkNlMXLX">
+    © 2026 <span class="heart" data-page-node-id="8rQAhG2ZWzPwruBVE9A9WS">黄浩东 · 大头</span> — 用心做产品，认真走世界。Built with 💛<br/>
+    <small style="opacity:.6;font-size:11.5px;">地图轮廓数据来自 Simplemaps.com（公开许可 · Attribution）</small>
+  </div>
+</div>
+
+<!-- 足迹模态框 -->
+<div class="modal" id="spotModal" onclick="if(event.target===this)closeModal()" data-page-node-id="7aPvy1wTNAIcBTi21IHvuF">
+  <div class="modal-card" data-page-node-id="wquOt0GIs7rWthMxDfDFto">
+    <button class="modal-close" onclick="closeModal()" data-page-node-id="co1YJ6aVtBW7b3oJpwuLMq">×</button>
+    <img class="modal-img" id="mImg" src="" alt="" data-page-node-id="0Nrve9w8iVDhjnY18h11L7" />
+    <div class="modal-body" data-page-node-id="mxR5yjwfwS7xDuS2uSe5Dt">
+      <span class="modal-tag" id="mTag" data-page-node-id="dlWgpUuJuv82ozlFyyhd6E"></span>
+      <h3 id="mTitle" data-page-node-id="NJYGcIr04k4dW2IyipEFOd"></h3>
+      <div class="meta" id="mMeta" data-page-node-id="Kayxz0405ArQiwbuSguVBU"></div>
+      <p class="feel" id="mFeel" data-page-node-id="Qjh2zgEExSarvAEfHbiEBB"></p>
+    </div>
+  </div>
+</div>
+
+<!-- 收藏模态框（书单 / 短片） -->
+<div class="modal" id="collModal" onclick="if(event.target===this)closeCollection()" data-page-node-id="collModalRoot">
+  <div class="modal-card coll-card-wide" data-page-node-id="collModalCard">
+    <button class="modal-close" onclick="closeCollection()" data-page-node-id="collModalClose">×</button>
+    <div class="coll-head" data-page-node-id="collModalHead">
+      <h3 id="collTitle" data-page-node-id="collTitle"></h3>
+      <div class="coll-sub" id="collSub" data-page-node-id="collSub"></div>
+    </div>
+    <div class="coll-body" data-page-node-id="collBody">
+      <div class="coll-grid" id="collGrid" data-page-node-id="collGrid"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+function switchView(name){
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  const el = document.getElementById('view-'+name);
+  if(el) el.classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  const btn = document.querySelector('.tab-btn[data-view="'+name+'"]');
+  if(btn) btn.classList.add('active');
+  window.scrollTo({top:0, behavior:'smooth'});
+  el.querySelectorAll('.card,.tl-item,.skill-card,.work-card,.region-card').forEach((c,i)=>{
+    c.style.animation='none'; c.offsetHeight; c.style.animation='';
+    c.style.animationDelay=(i%6*0.05)+'s';
+  });
+  // 第一次切到足迹 Tab 才渲染地图（此时视图可见，getBBox 才有效，点位才是准的）
+  if(name==='atlas' && !window._mapRendered){
+    window._mapRendered = true;
+    (async()=>{ await renderMap(); })();
+  }
+}
+
+/* ===== 技能 ===== */
+const skills = [
+  { icon:"🚀", name:"0→1 产品冷启动", level:90, tags:["用户体系","内容板块","互动插件","产品框架"], desc:"独立设计产品框架并上线，把想法从 0 做成 5.3w 用户的产品。" },
+  { icon:"📊", name:"数据驱动运营", level:85, tags:["Excel 透视","Power Query","AARRR","留存分析"], desc:"用数据透视拆解用户行为与留存，驱动产品迭代与运营策略。" },
+  { icon:"✍️", name:"文案与内容创作", level:95, tags:["商业文案","故事写作","剧本","深度长文"], desc:"985 中文系底子，能写打动人、也能写有转化率的内容。" },
+  { icon:"📱", name:"新媒体运营", level:88, tags:["公众号","视频号","抖音","IP 打造"], desc:"统筹官方融媒体矩阵，策划拍摄剪辑全流程，单场直播最高 4w+ 人。" },
+  { icon:"🤝", name:"社群与用户增长", level:86, tags:["冷启动","私域流量","分销体系","活动策划"], desc:"0→1 搭建校园私域与美团 club，单活动 500+ 人参与。" },
+  { icon:"🎬", name:"短视频与影像", level:80, tags:["脚本","拍摄","剪辑","获奖"], desc:"代表川大参赛长虹短视频获第一名，作品《万物生长》正式出版。" },
+  { icon:"💻", name:"Vibe Coding（学习中）", level:55, tags:["AI 辅助开发","SQL","快速原型","把想法做出来"], desc:"正在用 AI 辅助学习编程，让工具为我所用，把想法更快跑起来。" },
+  { icon:"🗂️", name:"项目管理与协作", level:82, tags:["SOP 沉淀","跨团队协调","招新面试","活动统筹"], desc:"统筹校级招新与品牌活动，沉淀可复用的核心运营 SOP。" },
+];
+
+/* ===== 履历 ===== */
+const journey = [
+  { date:"2024.09 – 至今", title:"小竹校友圈 · 联合发起人", org:"柳岸网络科技",
+    points:["0→1 设计产品框架（用户体系、内容板块、互动插件），完成 1.0 上线并迭代",
+            "注册用户 5.3w / 日活 4000+，秋季开学 2 个月从 0 增长至 4.8w",
+            "设计新用户引导 + 内容激励 + 社群冷启动，搭建留存体系",
+            "联合 5+ 高校团队，输出可复用的核心运营 SOP"] },
+  { date:"2024.09 – 至今", title:"招生宣传融媒体中心 · 副会长", org:"四川大学",
+    points:["统筹官方融媒体矩阵（公众号、视频号、抖音）",
+            "主导招生宣传视频全流程（策划–拍摄–剪辑–发布）",
+            "协调校方与学院资源，获评四川大学校级优秀学生干部"] },
+  { date:"2023.09 – 2024.09", title:"校团委创就部数据研究中心 · 副主任", org:"四川大学",
+    points:["负责官方新媒体视频内容运营，带队完成 10+ 个作品",
+            "统筹校级招新面试，策划青创杯、创业大讲堂等品牌活动（参与上千人次）"] },
+  { date:"2024 – 2025", title:"校园市场经理", org:"中国联合网络通信",
+    points:["0→1 搭建校园私域流量池，整合视频号等渠道实现用户增长 1w+",
+            "打造个人 IP + 团队分销体系，2025 秋季拉新 500+",
+            "获成都市分公司「优秀操盘手」表彰"] },
+  { date:"2024.02 – 2025.07", title:"美团校园俱乐部 · 会长", org:"美团",
+    points:["0→1 招募并搭建美团川大 club，整合校园美食流量",
+            "策划「美食节」活动，单次上线 500+ 人参与，沉淀活动 SOP"] },
+  { date:"2023.09 – 2027.06", title:"汉语言文学 · 本科在读", org:"四川大学（985）",
+    points:["GPA 3.72/4.0，专业前 30%", "CET-6 · 驾驶证 C1", "校级单项一等奖学金"] },
+];
+
+/* ===== 荣誉 ===== */
+const honors = [
+  "🏅 四川大学校级优秀学生干部",
+  "🎓 四川大学校级单项一等奖学金",
+  "📡 2025 联通成都市分公司「优秀操盘手」",
+  "🎬 长虹高校创意短视频《消失的爱人》第一名（代表川大）",
+  "📖 作品《万物生长》收录于校级刊物并由四川大学出版社出版",
+  "✍️ 原创剧本《秋风起》获川大影视文化艺术节奖",
+];
+
+/* ===== 作品 ===== */
+const works = [
+  { badge:"校园产品 · 核心", title:"小竹校友圈", wxPath:"#小程序://小竹校友圈/tQTb6dD73titiZe", link:"https://example.com/xiaozhu", desc:"一个从 0 长出来的多校校园社区产品，川大江安手绘地图也出自这里。我从框架到上线一路做起来。注册用户 5.3w / 日活 4000+ / 联合 5+ 高校团队。",
+    img:"assets/xc-map.jpg",
+    metrics:[{num:"5.3w",lab:"注册用户"},{num:"4k+",lab:"日活"},{num:"5+",lab:"合作团队"}] },
+  { badge:"出版物", title:"《万物生长》", desc:"收录于校级刊物，由四川大学出版社正式出版——文字被印刷成纸的瞬间。",
+    img:"assets/book-publish.jpg",
+    metrics:[{num:"1",lab:"正式出版"},{num:"校级",lab:"刊物收录"}] },
+  { badge:"短视频", title:"《消失的爱人》", desc:"代表川大参加长虹高校创意短视频大赛，拿下第一名（奖金 5000 元）。",
+    img:"assets/changhong.jpg",
+    video:"https://www.douyin.com/video/7430308716806688011",
+    metrics:[{num:"第1",lab:"名次"},{num:"长虹",lab:"赛事"}] },
+  { badge:"剧本", title:"《秋风起》", desc:"原创剧本，获四川大学影视文化艺术节奖。中文系的我，用影像讲故事。",
+    img:"assets/film-qiufengqi.jpg",
+    metrics:[{num:"获奖",lab:"影艺节"},{num:"原创",lab:"剧本"}] },
+];
+
+/* ===== 爱好 ===== */
+const hobbies = [
+  { group:"身体派", color:"#4ecb8d", emoji:"🏀", title:"打篮球", short:"锋卫摇摆人",
+    note:"大学以来最稳的社交和运动。打野球、学院赛、一起打到天黑。",
+    img:"assets/hobby-basketball.jpg" },
+  { group:"身体派", color:"#4ecb8d", emoji:"🧗", title:"攀岩", short:"抱石 / 先锋",
+    note:"抱石让我学会专注那一块——不焦虑路线，只看眼前这一步。",
+    img:"assets/hobby-climb.jpg" },
+  { group:"身体派", color:"#4ecb8d", emoji:"🏊", title:"游泳", short:"自由泳 / 长距",
+    note:"水里安静得像另一个世界。下水就是按下静音键。",
+    img:"assets/hobby-swim.jpg" },
+  { group:"身体派", color:"#4ecb8d", emoji:"🚴", title:"骑行", short:"城市 + 郊野",
+    note:"在成都骑过绕城、绿道、龙泉山。风迎面扑来的时候最自由。",
+    img:"assets/hobby-ride.jpg" },
+  { group:"身体派", color:"#4ecb8d", emoji:"🏃", title:"跑步", short:"5-10 km",
+    note:"晨跑或夜跑。跑到第三公里，那些卡住的事往往会自己解开。",
+    img:"assets/hobby-run.jpg" },
+  { group:"眼睛派", color:"#7a9bff", emoji:"📷", title:"摄影", short:"人文 / 街拍",
+    note:"手机镜头为主。喜欢按下快门的那一刻——眼睛先到，快门跟上。",
+    img:"assets/hobby-camera.jpg" },
+  { group:"嘴派", color:"#e98d4a", emoji:"🎤", title:"说唱", short:"写词 / 录音",
+    note:"把中文系的底子塞进 beat 里。写的是生活，押的是真心。",
+    img:"assets/hobby-rap.jpg" },
+  { group:"手派", color:"#f0b64a", emoji:"✍️", title:"书法", short:"楷书 / 行书",
+    note:"安静的午后铺开毛毡。一支笔蘸墨，是另一种心流。",
+    img:"assets/hobby-calligraphy.jpg" },
+  { group:"🔥 特长", color:"#ff7048", emoji:"🎭", title:"川剧 · 变脸 + 吐火", short:"师承习艺",
+    note:"非遗在身边长大。看一次就会上瘾——台上一秒，台下十年。",
+    img:"assets/hobby-sichuan-opera.jpg" },
+];
+
+/* ===== 书单 & 书评（爱读书板块）
+   每一项：title 书名 / author 作者 / tag 标签 / review 你的书评
+   ⚠️ 下面是示例占位，改成你自己真实读过的书即可 ===== */
+const books = [
+  { title:"《局外人》", author:"[法] 加缪", tag:"存在主义 · 小说",
+    review:"加缪把『荒诞』写得像一件日常的外套。一个对母亲葬礼都无动于衷的职员，在道德法庭上被审判——不是因为他杀了人，而是因为他不肯表演『该有的悲伤』。我读到的不是冷漠，而是一种诚实：人在荒谬的世界里，唯一能做的就是不说谎。结尾那句『我准备好重活一遍』，冷静得让人心颤。" },
+  { title:"《长安的荔枝》", author:"马伯庸", tag:"历史 · 职场",
+    review:"『一骑红尘妃子笑』，马伯庸把它拆成一个大唐社畜的职场历险。主角李善德像极了今天的打工人——为了五千里荔枝不坏拼尽全力，却发现自己只是规则齿轮里的一个零件。最戳我的是那句『就算失败，我也想知道自己倒在离终点多远的地方』。官场的黑暗被影射得不动声色，结尾『久在樊笼里，复得返自然』尤其清醒。" },
+  { title:"《妻妾成群》", author:"苏童", tag:"文学 · 人性",
+    review:"苏童笔下的宅院里，女人们争宠、算计、又彼此怜悯。颂莲们不是恶人，是被封建秩序逼成那样的。读完最大的感受是：真正吃掉女性的不是某个女人，而是那套吃人的规矩。张艺谋把它拍成《大红灯笼高高挂》，但书里那种幽暗、黏稠的窒息感，电影装不下。" },
+  { title:"《四川文化简史》", author:"吴显奎 主编", tag:"文化 · 地方史",
+    review:"包罗万象，把四川文化艺术的脉络梳理得清楚又扎实，从三星堆到川剧、从诗歌到民俗，都能接上。能感到编写者的用心。唯一觉得可惜：涉及大量考古场景和文物，却几乎没有配图，纯靠文字想象有点吃力；一些生僻字和古文也没注音。一本『阳春白雪』的好书，如果能配上图注和读音，就更『下里巴人』、更能被普通人读进去了。" },
+  { title:"《活着》", author:"余华", tag:"文学 · 长篇小说",
+    review:"一个人的一生被时代反复碾压，却始终活着。它教会我：最有力的表达，是克制——把最深的苦，说得最淡。" },
+  { title:"《围城》", author:"钱锺书", tag:"文学 · 讽刺",
+    review:"外面的人想进去，里面的人想出来。方鸿渐的狼狈，是每个成年人都绕不开的围城。妙语连珠，但底色是清醒的无奈。" },
+  { title:"《被讨厌的勇气》", author:"岸见一郎 · 古贺史健", tag:"心理 · 成长",
+    review:"把『课题分离』讲透了。人生不是活给别人看的期待，而是自己选的课题。敢被讨厌，才有自由。" },
+];
+
+/* ===== 短片作品（拍短片板块）
+   link = 平台视频链接（抖音/视频号/B站），留空则显示『链接待补』 ===== */
+const films = [
+  { title:"《消失的爱人》", tag:"短视频 · 长虹第一名", meta:"代表川大 · 长虹高校创意短视频大赛",
+    desc:"代表四川大学参赛，拿下创意短视频第一名（奖金 5000 元）。从脚本到剪辑，全程自己上手。",
+    link:"https://www.douyin.com/video/7430308716806688011", img:"assets/changhong.jpg" },
+  { title:"《秋风起》", tag:"原创剧本 · 影艺节获奖", meta:"川大影视文化艺术节",
+    desc:"原创剧本，用影像讲一个中文系学生自己的故事。文字与镜头第一次握手。",
+    link:"", img:"assets/film-qiufengqi.jpg" },
+  { title:"川大招生宣传片", tag:"官方融媒体 · 副会长统筹", meta:"四川大学招生宣传融媒体中心",
+    desc:"统筹官方招生宣传视频全流程——策划、拍摄、剪辑、发布。单场直播最高 4w+ 人观看。",
+    link:"https://v.douyin.com/0yyNk4vVvEQ/", img:"assets/film-scu-recruit.jpg" },
+  { title:"《挑战 100 个专业 · 法医学》", tag:"挑战系列 · 第一期", meta:"沉浸式专业体验 · 小红书",
+    desc:"把镜头架到法医学课堂。讲台上是骨骼标本，讲台下是被打破的『刻板印象』——这门学科，比悬疑剧冷静，比想象温柔。",
+    link:"https://xhslink.cn/o/3GrDwsPSPwM", img:"assets/film-forensic.jpg" },
+  { title:"《挑战 100 个专业 · 考古学》", tag:"挑战系列 · 第二期", meta:"沉浸式专业体验 · 抖音",
+    desc:"跟着考古学专业进田野。一锹一刷，把时间从土里挖出来——考古学不是象牙塔，是『前世今生』的脉络不绝。",
+    link:"https://www.douyin.com/video/7430308716806688011/search/%E5%9B%9B%E5%B7%9D%E5%A4%A7%E5%AD%A6%E8%80%83%E5%8F%A4%E5%AD%A6?aid=c2543df0-5218-49d5-8ca0-b95cc020a8cf&modal_id=7522390892091575586&type=general", img:"assets/film-archaeology.jpg" },
+];
+
+/* ===== 足迹点位（可点击看照片+感受）
+   prov = 省份在 china.svg 内的 path id (CN=省份代码)
+   fx/fy = 0~1 表示落点在该省轮廓内的相对位置(默认省中心0.5/0.5)
+   ==== ===== */
+const spots = [
+  { id:"beijing", prov:"CNBJ", fx:0.50, fy:0.50, color:"#e98d4a", title:"北京", year:"首都行 · 美团校园", tag:"开阔", img:"assets/spot-beijing.jpg",
+    feel:"在美团校园俱乐部活动上，站上北京的台子说话。那种『很大、很忙、很好看』的印象，和第一次站上台的紧张，一起留在了这座城市。" },
+  { id:"hechi", prov:"CNGX", fx:0.30, fy:0.28, color:"#f0b64a", title:"广西 · 河池", year:"成长之地", tag:"故乡", img:"assets/q-avatar.png",
+    feel:"被喀斯特群山环抱的小城。这里没有大城市的喧嚣，却有最清澈的山水。我在这里学会了安静的坚持——越是平实的地方，越能把事情做成的韧劲。" },
+  { id:"chongqing", prov:"CNCQ", fx:0.50, fy:0.50, color:"#7a9bff", title:"重庆", year:"吃货与山城", tag:"舌尖之旅", img:"assets/spot-leshan2.jpg",
+    feel:"山城重庆，火锅和小面是这里的呼吸。穿过穿楼的轻轨、爬不完的台阶、长江嘉陵江交汇——一座越走越有味的城市。" },
+  { id:"yongzhou", prov:"CNHN", fx:0.50, fy:0.82, color:"#f0b64a", title:"湖南 · 永州", year:"来处", tag:"根", img:"assets/q-avatar.png",
+    feel:"地理上的来处，潇湘之畔。柳宗元笔下的「永州之野」，一种朴素的文人气质，也许悄悄长进了我的骨子里。" },
+  { id:"changsha", prov:"CNHN", fx:0.66, fy:0.40, color:"#f0b64a", title:"湖南 · 长沙", year:"橘子洲头", tag:"热辣", img:"assets/spot-changsha.jpg",
+    feel:"站在橘子洲头，毛泽东青年艺术雕塑在夜色里亮起来。湘江、小吃、满街的烟火气——长沙是那种一到就让人想大声说话的地方。" },
+  { id:"chengdu", prov:"CNSC", fx:0.58, fy:0.44, color:"#4ecb8d", title:"四川 · 成都", year:"2023 — 至今", tag:"求学", img:"assets/spot-chengdu.jpg",
+    feel:"在川大读中文，也在这里一头扎进了互联网与创业。成都给了我学习和折腾的土壤，是我现在生活的地方。" },
+  { id:"leshan", prov:"CNSC", fx:0.55, fy:0.60, color:"#7a9bff", title:"四川 · 乐山", year:"周末游", tag:"周边", img:"assets/spot-leshan.jpg",
+    feel:"乐山大佛脚下，和朋友们一起看过世界最大的石刻坐佛。山、水、佛，加上一帮人的笑声——这是周末该有的样子。" },
+  { id:"jiange", prov:"CNSC", fx:0.78, fy:0.36, color:"#7a9bff", title:"四川 · 广元剑门关", year:"蜀道行", tag:"闯关", img:"assets/spot-jiange.jpg",
+    feel:"「蜀道之难，难于上青天」——李白没夸张。剑门关的栈道挂在大渡河悬崖上，走完那条路，脚有点抖，心里很满。" },
+  { id:"kunming", prov:"CNYN", fx:0.55, fy:0.38, color:"#7a9bff", title:"云南 · 昆明", year:"春城", tag:"舒展", img:"assets/spot-kunming.jpg",
+    feel:"四季如春的昆明，是中转也是目的地。翠湖边上喂海鸥，滇池边看日落——节奏一慢下来，就想多待几天。" },
+  { id:"dali", prov:"CNYN", fx:0.36, fy:0.58, color:"#7a9bff", title:"云南 · 大理", year:"苍洱之间", tag:"风花雪月", img:"assets/spot-dali.jpg",
+    feel:"苍山下的白族三道茶、洱海边的自行车、古城里漫无目的的下午。大理是那种——你什么都不做也很合理的地方。" },
+  { id:"shangri", prov:"CNYN", fx:0.50, fy:0.16, color:"#7a9bff", title:"云南 · 香格里拉", year:"高原行", tag:"离天最近", img:"assets/spot-shangri.jpg",
+    feel:"海拔三千多米，松赞林寺的金顶、纳帕海的黑颈鹤、藏式木屋飘出的炊烟。离天最近的地方，心跳也跟着慢半拍。" },
+  { id:"xishuangbanna", prov:"CNYN", fx:0.50, fy:0.90, color:"#e98d4a", title:"云南 · 西双版纳", year:"雨林之行", tag:"热土", img:"assets/spot-xishuangbanna.jpg",
+    feel:"走进热带雨林，穿上傣族的衣服，双手合十。绿得发亮的叶子、芭蕉和藤蔓——那是我第一次觉得，南方的绿可以这么浓。" },
+  { id:"qinggang", prov:"CNQH", fx:0.62, fy:0.42, color:"#e98d4a", title:"青甘大环线", year:"7天自驾", tag:"旷野", img:"assets/spot-qinghai.jpg",
+    feel:"七天自驾，从青海湖到茶卡、到敦煌的戈壁与鸣沙山。车轮碾过荒芜，才懂得辽阔的意义。那是我见过最震撼的风景。" },
+];
+
+/* ===== 地图（基于 simplemaps 中国 SVG 底图） ===== */
+async function renderMap(){
+  const w=1000, h=738;
+  // 取 svg 内容
+  let svgText = '';
+  // 1. 本地 fetch 2. CDN 回退
+  for(const url of ['assets/china.svg','https://simplemaps.com/static/svg/country/cn/admin1/cn.svg']){
+    try{
+      const r = await fetch(url);
+      if(r.ok){ svgText = await r.text(); break; }
+    }catch(e){}
+  }
+  if(!svgText){
+    document.getElementById('atlasMap').innerHTML = '<div style="text-align:center;padding:40px;color:var(--muted);">⚠️ 地图加载失败<br/><small style="opacity:.7;">提示：用 VSCode + Live Server 预览；点 var spots=[...] 改坐标</small></div>';
+    return;
+  }
+  // 去掉 xml declaration 和注释
+  svgText = svgText.replace(/<\?xml.*?\?>/, '').replace(/<!--[\s\S]*?-->/g, '');
+  // 把 svg 注入到容器
+  const wrap = document.getElementById('atlasMap');
+  wrap.innerHTML = svgText;
+  // 给 svg 加上 viewBox/响应式样式
+  const svg = wrap.querySelector('svg');
+  svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
+  svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+  svg.style.width = '100%';
+  svg.style.height = 'auto';
+  svg.style.display = 'block';
+  // 改造默认样式：先去掉 svg 默认 fill，让 CSS 控制
+  svg.removeAttribute('fill');
+  svg.removeAttribute('stroke');
+
+  // 添加覆盖层（圆点位 + 动画路径）
+  const ns = 'http://www.w3.org/2000/svg';
+  // 定义可复用：圆周轨迹（左下角圆弧 → 飞到目标点）
+  const defs = document.createElementNS(ns, 'defs');
+  defs.innerHTML = spots.map((sp,i)=>{
+    const sx = 50, sy = h-50;  // 起点（左下角）
+    const pos = spotXY(sp, svg);  // 按省份轮廓计算真实坐标
+    const tx = pos.x, ty = pos.y;
+    // 圆周轨迹：从起点经过一段弧线到目标
+    const cx = (sx+tx)/2, cy = (sy+ty)/2 - 80;
+    return `<path id="path-${sp.id}" d="M ${sx} ${sy} Q ${cx} ${cy} ${tx} ${ty}" fill="none"/>`;
+  }).join('');
+  svg.appendChild(defs);
+
+  // 圆点位
+  spots.forEach((sp,i)=>{
+    const pos = spotXY(sp, svg);
+    const tx = pos.x, ty = pos.y;
+    const g = document.createElementNS(ns, 'g');
+    g.classList.add('spot-pin');
+    g.setAttribute('transform', `translate(${tx},${ty})`);
+    g.style.cursor = 'pointer';
+
+    // 外圈光晕
+    const ringOuter = document.createElementNS(ns, 'circle');
+    ringOuter.setAttribute('r', '22'); ringOuter.setAttribute('fill', sp.color); ringOuter.setAttribute('opacity', '0.12');
+    g.appendChild(ringOuter);
+    // 浮动动画小圆（从起点飞到目标）
+    const fly = document.createElementNS(ns, 'circle');
+    fly.setAttribute('r', '5'); fly.setAttribute('fill', sp.color);
+    fly.setAttribute('opacity', '0.85');
+    fly.innerHTML = `<animateMotion dur="2.4s" begin="${0.4+i*0.3}s" fill="freeze" rotate="auto"><mpath href="#path-${sp.id}"/></animateMotion>
+                     <animate attributeName="opacity" values="0;0.95;0.95" keyTimes="0;0.15;1" dur="2.4s" begin="${0.4+i*0.3}s" fill="freeze"/>`;
+    // 不追加 fly 到 g 中（飞过终点），但挂到 svg 顶层
+    fly.style.pointerEvents = 'none';
+    g.appendChild(fly);
+
+    // 中心点（label点击区）
+    const core = document.createElementNS(ns, 'circle');
+    core.classList.add('pin-core');
+    core.setAttribute('r', '10');
+    core.setAttribute('fill', sp.color);
+    core.setAttribute('stroke', '#0b0e14');
+    core.setAttribute('stroke-width', '2.5');
+    g.appendChild(core);
+
+    // 文字标签
+    const lbl = document.createElementNS(ns, 'text');
+    lbl.classList.add('lbl');
+    lbl.setAttribute('x', '15'); lbl.setAttribute('y', '4');
+    lbl.textContent = sp.title;
+    g.appendChild(lbl);
+
+    g.addEventListener('click', ()=>openSpot(sp.id));
+    svg.appendChild(g);
+  });
+
+  // 加底部 attribution（合规）
+  const attr = document.createElementNS(ns, 'text');
+  attr.setAttribute('x', w-10); attr.setAttribute('y', h-8);
+  attr.setAttribute('text-anchor', 'end');
+  attr.setAttribute('fill', 'rgba(255,255,255,0.18)');
+  attr.setAttribute('font-size', '10');
+  attr.setAttribute('font-family', 'sans-serif');
+  attr.textContent = '中国轮廓地图 © Simplemaps.com（公开许可）';
+  svg.appendChild(attr);
+}
+
+/* 按省份轮廓计算点位真实坐标：prov=省id, fx/fy=省内相对位置(0~1)
+   取该省面积最大的主陆地 path 的包围盒中心(避免离岛导致偏移) */
+function spotXY(sp, svg){
+  const els = svg.querySelectorAll('[id="'+sp.prov+'"]');
+  if(els && els.length && typeof els[0].getBBox === 'function'){
+    try{
+      let best=null, bestArea=-1;
+      els.forEach(e=>{
+        const b = e.getBBox();
+        const area = b.width * b.height;
+        if(area > bestArea){ bestArea = area; best = b; }
+      });
+      if(best){
+        return { x: best.x + best.width*(sp.fx!=null?sp.fx:0.5),
+                 y: best.y + best.height*(sp.fy!=null?sp.fy:0.5) };
+      }
+    }catch(e){}
+  }
+  // 兜底：找不到省份元素时用旧百分比坐标
+  return {x: (sp.x!=null?sp.x:50)*10, y: (sp.y!=null?sp.y:50)*7.38};
+}
+
+/* ===== 足迹卡片列表 ===== */
+function renderSpotList(){
+  document.getElementById('spotList').innerHTML = spots.map(sp=>`
+    <div class="card" style="cursor:pointer;" onclick="openSpot('${sp.id}')">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+        <span style="width:14px;height:14px;border-radius:50%;background:${sp.color};display:inline-block;flex-shrink:0;"></span>
+        <h3 style="font-size:17px;margin:0;">${sp.title}</h3>
+      </div>
+      <div class="meta" style="color:var(--muted);font-size:12.5px;">${sp.year} · ${sp.tag}</div>
+      <p style="font-size:14px;color:var(--text-dim);margin-top:8px;">${sp.feel.slice(0,40)}…</p>
+    </div>`).join('');
+}
+
+/* ===== 爱好渲染 ===== */
+function renderHobbies(){
+  const groups = {};
+  hobbies.forEach(h => { (groups[h.group] = groups[h.group] || []).push(h); });
+  let html = '';
+  for (const g in groups) {
+    html += `<div class="hobby-group"><div class="hobby-group-title">${g}</div><div class="hobby-cards">`;
+    groups[g].forEach(h => {
+      html += `
+      <div class="card hobby-card" onclick="openHobby('${h.title}')">
+        <div class="hobby-img" style="background:${h.color}22;">
+          <span class="hobby-emoji">${h.emoji}</span>
+          ${h.img ? `<img src="${h.img}" alt="${h.title}" loading="lazy"/>` : ''}
+        </div>
+        <div class="hobby-meta">
+          <h3>${h.title}</h3>
+          <div class="hobby-short">${h.short}</div>
+        </div>
+      </div>`;
+    });
+    html += `</div></div>`;
+  }
+  document.getElementById('hobbyGrid').innerHTML = html;
+}
+
+function openHobby(title){
+  const h = hobbies.find(x => x.title === title);
+  if (!h) return;
+  // 只要 h.img 有值就用真实照片，没图才回退 Q 版
+  document.getElementById('mImg').src = h.img ? h.img : 'assets/q-avatar.png';
+  document.getElementById('mTag').textContent = h.group;
+  document.getElementById('mTag').style.background = h.color+'22';
+  document.getElementById('mTag').style.color = h.color;
+  document.getElementById('mTag').style.border = '1px solid '+h.color;
+  document.getElementById('mTitle').textContent = h.title + ' · ' + h.short;
+  document.getElementById('mMeta').textContent = '点开看看';
+  document.getElementById('mFeel').textContent = h.note;
+  document.getElementById('spotModal').classList.add('open');
+}
+
+/* ===== 收藏模态框（书单 / 短片） ===== */
+function openCollection(type){
+  const grid = document.getElementById('collGrid');
+  if(type === 'books'){
+    document.getElementById('collTitle').textContent = '📚 我的书单';
+    document.getElementById('collSub').textContent = '读过的书，和一些没来得及说的话。';
+    grid.innerHTML = books.map(b=>`
+      <div class="coll-card">
+        <span class="coll-tag">${b.tag}</span>
+        <h4>${b.title}</h4>
+        <div class="coll-meta">${b.author}</div>
+        <p class="coll-review">${b.review}</p>
+      </div>`).join('');
+  } else if(type === 'films'){
+    document.getElementById('collTitle').textContent = '🎬 我的短片';
+    document.getElementById('collSub').textContent = '用镜头讲过的故事，点按钮可直接跳到对应平台观看。';
+    grid.innerHTML = films.map(f=>`
+      <div class="coll-card">
+        ${f.img?`<img class="coll-thumb" src="${f.img}" alt="${f.title}" loading="lazy"/>`:''}
+        <span class="coll-tag">${f.tag}</span>
+        <h4>${f.title}</h4>
+        <div class="coll-meta">${f.meta}</div>
+        <p class="coll-review">${f.desc}</p>
+        ${f.link
+          ? `<a class="coll-btn" href="${f.link}" target="_blank" rel="noopener">▶ 平台观看 ↗</a>`
+          : ''}
+      </div>`).join('');
+  }
+  document.getElementById('collModal').classList.add('open');
+}
+function closeCollection(){ document.getElementById('collModal').classList.remove('open'); }
+
+/* ===== 模态框 ===== */
+function openSpot(id){
+  const sp = spots.find(s=>s.id===id);
+  if(!sp) return;
+  document.getElementById('mImg').src = sp.img ? sp.img : 'assets/q-avatar.png';
+  document.getElementById('mTag').textContent = sp.tag;
+  document.getElementById('mTag').style.background = sp.color+'22';
+  document.getElementById('mTag').style.color = sp.color;
+  document.getElementById('mTag').style.border = '1px solid '+sp.color;
+  document.getElementById('mTitle').textContent = sp.title;
+  document.getElementById('mMeta').textContent = sp.year;
+  document.getElementById('mFeel').textContent = sp.feel;
+  document.getElementById('spotModal').classList.add('open');
+}
+function closeModal(){ document.getElementById('spotModal').classList.remove('open'); }
+document.addEventListener('keydown', e=>{ if(e.key==='Escape'){ closeModal(); closeCollection(); } });
+
+function copyWx(text){
+  if(navigator.clipboard){ navigator.clipboard.writeText(text); }
+  else { const ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); }
+  const tip=document.getElementById('wxTip');
+  if(tip){ tip.style.display='block'; setTimeout(()=>tip.style.display='none', 3000); }
+}
+
+/* ===== 联系卡点击复制 =====
+   兼容 HTTPS（navigator.clipboard）和 file://（execCommand fallback）
+   在卡片右上角显示一个 1.8s 气泡提示，复制失败时变红 */
+async function copyContact(value, btn, msg){
+  let ok = false;
+  try {
+    if(navigator.clipboard && window.isSecureContext){
+      await navigator.clipboard.writeText(value);
+      ok = true;
+    } else {
+      const ta = document.createElement('textarea');
+      ta.value = value;
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      ta.setAttribute('readonly','');
+      document.body.appendChild(ta);
+      ta.select();
+      try { ok = document.execCommand('copy'); } catch(_){ ok = false; }
+      document.body.removeChild(ta);
+    }
+  } catch(_){ ok = false; }
+  const card = btn.closest('.contact-card');
+  if(!card) return;
+  const toast = card.querySelector('.copy-toast');
+  if(!toast) return;
+  toast.textContent = ok ? msg : '复制失败，请手动复制';
+  card.classList.remove('copy-fail');
+  if(!ok) card.classList.add('copy-fail');
+  card.classList.add('copied');
+  if(card._copyTimer) clearTimeout(card._copyTimer);
+  card._copyTimer = setTimeout(()=>{ card.classList.remove('copied'); card.classList.remove('copy-fail'); }, 1800);
+}
+
+/* ===== 渲染 ===== */
+function renderSkills(){
+  document.getElementById('skillGrid').innerHTML = skills.map(s=>`
+    <div class="skill-card">
+      <div class="skill-icon">${s.icon}</div>
+      <h3>${s.name}</h3>
+      <p style="color:var(--text-dim);font-size:14px;margin-top:6px;">${s.desc}</p>
+      <div class="tag-row">${s.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+      <div class="level"><i style="width:${s.level}%"></i></div>
+      <div class="level-label"><span>掌握度</span><span>${s.level}%</span></div>
+    </div>`).join('');
+}
+function renderJourney(){
+  document.getElementById('timeline').innerHTML = journey.map(j=>`
+    <div class="tl-item">
+      <div class="tl-date">${j.date}</div>
+      <div class="tl-title">${j.title}</div>
+      <div class="tl-org">${j.org}</div>
+      <div class="tl-points">${j.points.map(p=>`<div class="tl-point">${p}</div>`).join('')}</div>
+    </div>`).join('');
+}
+function renderHonors(){
+  document.getElementById('honors').innerHTML = honors.map(h=>`<span class="honor-tag">${h}</span>`).join('');
+}
+function renderWorks(){
+  document.getElementById('worksGrid').innerHTML = works.map(w=>`
+    <div class="card work-card">
+      ${w.img?`<img class="work-thumb" src="${w.img}" alt="${w.title}"/>`:''}
+      <div class="work-badge">${w.badge}</div>
+      <h3>${w.title}</h3>
+      <p>${w.desc}</p>
+      ${w.link?`<div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="${w.link}" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;font-size:14px;">🔗 打开官网 ↗</a>
+        ${w.wxPath?`<button onclick="copyWx('${w.wxPath}')" style="background:var(--accent-soft);border:1px solid rgba(240,182,74,.3);color:var(--accent);padding:6px 12px;border-radius:8px;font-size:13.5px;cursor:pointer;font-family:inherit;">📱 复制小程序链接</button>`:''}
+      </div>
+      ${w.wxPath?`<div id="wxTip" style="display:none;margin-top:8px;padding:10px 14px;background:rgba(78,203,141,0.13);border:1px solid rgba(78,203,141,.3);border-radius:10px;color:var(--good);font-size:13px;">✓ 已复制 — 打开微信粘贴并发送，链接自动启动小程序</div>`:''}`:''}
+      ${w.video!==undefined ? (w.video ? `<a class="coll-btn" href="${w.video}" target="_blank" rel="noopener">▶ 平台观看 ↗</a>` : `<span class="coll-btn disabled">▶ 视频链接待补（发我即接入）</span>`) : ''}
+      <div class="work-metric">${w.metrics.map(m=>`<div class="m"><div class="num">${m.num}</div><div class="lab">${m.lab}</div></div>`).join('')}</div>
+    </div>`).join('');
+}
+
+renderSkills();
+renderJourney();
+renderHonors();
+renderWorks();
+renderSpotList();
+renderHobbies();
+</script>
+</body>
+</html>
