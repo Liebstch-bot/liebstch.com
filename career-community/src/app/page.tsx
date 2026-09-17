@@ -20,7 +20,7 @@ export default function HomePage() {
       <section className="hero">
         <div className="shell hero-grid">
           <div>
-            <div className="hero-kicker"><span>#liebstch</span><strong>YOUTH CAREER OS</strong></div>
+            <div className="hero-kicker"><span>#青衫求职</span><strong>LIEBSTCH · CAREER OS</strong></div>
             <h1>把作品、求职过程和真实经验，放在同一个长期生长的网站里。</h1>
             <p className="hero-lead">我是黄浩东（大头），四川大学中文系、0→1 创业者。liebstch.com 从个人作品集升级为求职社区：你可以私密管理投递进度，按时收到面试提醒，也可以把有价值的岗位和面经公开分享给其他人。</p>
             <div className="hero-actions">
@@ -98,5 +98,6 @@ export default function HomePage() {
     </main>
   );
 }
+
 
 
