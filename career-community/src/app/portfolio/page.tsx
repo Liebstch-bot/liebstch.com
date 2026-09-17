@@ -30,7 +30,7 @@ export default function PortfolioPage() {
     <main className="shell page">
       <section className="page-hero">
         <div className="eyebrow">HUANG HAODONG · PORTFOLIO</div>
-        <h1>黄浩东（大头）的作品与经历，继续在这个网站里生长。</h1>
+        <h1>大头的作品与经历，将在这个网站里持续生长~</h1>
         <p>985 中文系 + 0→1 创业者。这里把原有个人主页中的产品、出版物、短视频、剧本和经历重新组织，并加入正在建设的 liebstch 求职社区。</p>
         <div className="page-actions"><a className="button button-dark" href="mailto:hello@liebstch.com">联系我 <Icon name="arrow" size={16} /></a><Link className="button" href="/community">查看公开复盘</Link></div>
       </section>
@@ -72,3 +72,4 @@ export default function PortfolioPage() {
     </main>
   );
 }
+
