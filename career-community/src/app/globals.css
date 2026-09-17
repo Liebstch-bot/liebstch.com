@@ -517,7 +517,7 @@ body {
 ::selection { color: #fffdf8; background: #6b7f72; }
 
 .site-header { background: rgba(255,253,248,.88); border-bottom-color: rgba(100,90,70,.10); }
-.brand-mark { color: #fffdf8; background: #263036; }
+.brand-mark { color: #fffdf8; background: #52738b; }
 .brand small { color: var(--muted); }
 .main-nav a { color: var(--muted); }
 .main-nav a:hover, .main-nav a.active { color: var(--ink); background: rgba(38,48,54,.06); }
@@ -526,8 +526,8 @@ body {
 
 .button { color: var(--ink); border-color: var(--line-strong); background: rgba(255,253,248,.85); }
 .button:hover { border-color: #a9a08f; background: var(--surface-soft); }
-.button-primary, .button-dark { border-color: #263036; color: #fffdf8; background: #263036; }
-.button-primary:hover, .button-dark:hover { border-color: #42535b; background: #42535b; }
+.button-primary, .button-dark { border-color: #52738b; color: #fffdf8; background: #52738b; }
+.button-primary:hover, .button-dark:hover { border-color: #416276; background: #416276; }
 .button-blue { border-color: var(--blue); color: #fff; background: var(--blue); }
 .button-blue:hover { background: #416276; }
 .button-soft { border-color: rgba(82,115,139,.22); color: var(--blue); background: var(--blue-soft); }
@@ -623,11 +623,11 @@ body {
 
 .post-card { border-color: rgba(100,90,70,.09); background: rgba(255,253,248,.9); }
 .post-card:hover { border-color: rgba(82,115,139,.20); transform: translateY(-3px); }
-.post-card.featured { border-left: 4px solid #6f927f; }
+.post-card.featured { border-left: 4px solid #52738b; }
 .post-title a:hover { color: var(--blue); }
 .tag { border-color: rgba(82,115,139,.12); color: #526b78; background: #edf3f6; }
 .feed-tabs a { border-color: rgba(100,90,70,.09); background: #fffdf8; }
-.feed-tabs a.active { border-color: #263036; color: #fffdf8; background: #263036; }
+.feed-tabs a.active { border-color: #52738b; color: #fffdf8; background: #52738b; }
 .article { background: rgba(255,253,248,.92); }
 .article-body { color: #4e5a62; }
 .comment { border-color: rgba(100,90,70,.09); }
@@ -647,3 +647,4 @@ body {
   .hero { min-height: auto; padding: 86px 0 54px; }
   .hero::before { top: 22px; font-size: 78px; }
 }
+
