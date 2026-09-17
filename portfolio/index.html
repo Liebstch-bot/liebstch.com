@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="黄浩东（大头）的作品集：小竹校友圈、liebstch 求职社区、出版物与影像作品。">
+  <title>作品集 · 黄浩东（大头）</title>
+  <style>
+    :root { --bg:#0b0e14; --panel:#121722; --panel-2:#171d29; --line:rgba(255,255,255,.1); --text:#e8eaef; --dim:#98a1b0; --muted:#687181; --amber:#f0b64a; --amber-2:#e98d4a; --lime:#c7f45a; --radius:20px; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { min-height:100vh; color:var(--text); background:radial-gradient(900px 600px at 10% -10%,rgba(240,182,74,.13),transparent 60%),radial-gradient(700px 500px at 100% 5%,rgba(122,155,255,.09),transparent 55%),var(--bg); font-family:'Noto Sans SC',system-ui,sans-serif; line-height:1.7; }
+    a { color:inherit; text-decoration:none; }
+    .shell { width:min(1160px,calc(100% - 36px)); margin:0 auto; }
+    .nav { position:sticky; top:0; z-index:20; padding:14px 0; border-bottom:1px solid var(--line); background:rgba(11,14,20,.8); backdrop-filter:blur(18px); }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { display:flex; align-items:center; gap:11px; font-weight:800; }
+    .brand-mark { width:36px; height:36px; display:grid; place-items:center; border-radius:12px; color:#1a1205; background:linear-gradient(135deg,var(--amber),var(--amber-2)); font-weight:900; }
+    .brand small { display:block; color:var(--muted); font-size:10px; letter-spacing:.18em; }
+    .nav-links { display:flex; align-items:center; gap:8px; }
+    .nav-links a { padding:8px 12px; border-radius:999px; color:var(--dim); font-size:13px; }
+    .nav-links a:hover { color:var(--text); background:rgba(255,255,255,.06); }
+    .nav-links .primary { color:#17120a; background:var(--amber); font-weight:800; }
+    .hero { padding:86px 0 64px; }
+    .eyebrow { color:var(--amber); font-size:12px; font-weight:800; letter-spacing:.18em; text-transform:uppercase; }
+    h1 { max-width:920px; margin-top:18px; font-size:clamp(44px,7vw,82px); line-height:1.04; letter-spacing:-.06em; }
+    .hero p { max-width:760px; margin-top:22px; color:var(--dim); font-size:17px; }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .button { display:inline-flex; align-items:center; gap:7px; padding:11px 16px; border:1px solid var(--line); border-radius:999px; background:var(--panel); font-weight:800; }
+    .button.primary { border-color:var(--amber); color:#17120a; background:var(--amber); }
+    .button.lime { border-color:var(--lime); color:#11170b; background:var(--lime); }
+    .section { padding:28px 0; }
+    .section-head { display:flex; align-items:end; justify-content:space-between; gap:20px; margin-bottom:16px; }
+    .section-head h2 { font-size:26px; letter-spacing:-.03em; }
+    .section-head p { color:var(--dim); font-size:13px; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .card { overflow:hidden; border:1px solid var(--line); border-radius:var(--radius); background:var(--panel); box-shadow:0 24px 70px rgba(0,0,0,.25); }
+    .card.wide { grid-column:1/-1; }
+    .card img { width:100%; height:230px; object-fit:cover; border-bottom:1px solid var(--line); }
+    .poster { display:grid; place-items:center; min-height:230px; border-bottom:1px solid var(--line); background:radial-gradient(circle at 75% 20%,rgba(199,244,90,.24),transparent 28%),#0d1118; }
+    .poster strong { color:transparent; -webkit-text-stroke:1px rgba(240,182,74,.7); font-size:clamp(42px,8vw,100px); letter-spacing:-.07em; }
+    .card-body { padding:20px; }
+    .badges { display:flex; gap:7px; flex-wrap:wrap; margin-bottom:12px; }
+    .badge { padding:3px 9px; border:1px solid var(--line); border-radius:999px; color:var(--dim); background:rgba(255,255,255,.04); font-size:11px; }
+    .badge.hot { border-color:rgba(199,244,90,.35); color:var(--lime); background:rgba(199,244,90,.08); }
+    h3 { font-size:23px; }
+    .card p { margin-top:8px; color:var(--dim); }
+    .metrics { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+    .metric { padding:7px 10px; border-radius:10px; color:var(--text); background:var(--panel-2); font-size:12px; }
+    .footer { margin-top:50px; padding:30px 0 50px; border-top:1px solid var(--line); color:var(--muted); font-size:12px; display:flex; justify-content:space-between; gap:16px; }
+    @media (max-width:760px) { .nav-links a:not(.primary) { display:none; } .grid { grid-template-columns:1fr; } .card.wide { grid-column:auto; } .footer { display:block; } }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="shell nav-inner">
+      <a class="brand" href="/"><span class="brand-mark">L</span><span>liebstch<small>HUANG HAODONG</small></span></a>
+      <div class="nav-links"><a href="/">个人主页</a><a href="/#works">原作品页</a><a class="primary" href="https://app.liebstch.com">进入求职社区</a></div>
+    </div>
+  </nav>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow">PORTFOLIO · 作品与经历</div>
+      <h1>把做过的事讲清楚，也把正在做的事继续做深。</h1>
+      <p>我是黄浩东（大头），四川大学中文系、0→1 创业者。这里聚焦产品、内容、增长和影像作品，也放入正在建设的 liebstch 求职社区。</p>
+      <div class="actions"><a class="button primary" href="https://app.liebstch.com/portfolio">打开新版作品集</a><a class="button" href="https://app.liebstch.com/community">浏览社区广场</a><a class="button" href="/">返回个人主页</a></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><div><h2>核心作品</h2><p>从校园产品到个人网站，从前端体验到增长结果。</p></div></div>
+      <div class="grid">
+        <article class="card wide">
+          <div class="poster"><strong>LIEBSTCH / CAREER OS</strong></div>
+          <div class="card-body"><div class="badges"><span class="badge hot">VIBE CODING · 开发中</span><span class="badge">Next.js</span><span class="badge">Supabase</span><span class="badge">邮件提醒</span></div><h3>liebstch 求职社区</h3><p>把私人求职跟踪、时区邮件提醒、企业分区、面经广场和管理员治理放在同一个产品里。目前是新一代的 Vibe Coding 项目。</p><div class="metrics"><span class="metric">邮箱 OTP</span><span class="metric">时区提醒</span><span class="metric">企业分区</span><span class="metric">RLS 权限</span></div><div class="actions"><a class="button primary" href="https://app.liebstch.com">查看产品</a><a class="button" href="https://app.liebstch.com/community">进入社区</a></div></div>
+        </article>
+
+        <article class="card"><img src="/assets/xc-map.jpg" alt="小竹校友圈"><div class="card-body"><div class="badges"><span class="badge hot">校园产品 · 核心</span><span class="badge">0→1</span></div><h3>小竹校友圈</h3><p>一个从 0 长出来的多校校园社区产品。我参与框架、上线和迭代，注册用户 5.3w / 日活 4000+ / 联合 5+ 高校团队。</p><div class="metrics"><span class="metric">5.3w 用户</span><span class="metric">4k+ 日活</span></div></div></article>
+
+        <article class="card"><img src="/assets/book-publish.jpg" alt="万物生长"><div class="card-body"><div class="badges"><span class="badge">出版</span><span class="badge">中文写作</span></div><h3>《万物生长》</h3><p>收录于校级刊物，由四川大学出版社正式出版。文字被印刷成纸，也被更多人读到。</p></div></article>
+
+        <article class="card"><img src="/assets/changhong.jpg" alt="消失的爱人"><div class="card-body"><div class="badges"><span class="badge hot">短视频第一名</span><span class="badge">长虹赛事</span></div><h3>《消失的爱人》</h3><p>代表四川大学参加长虹高校创意短视频大赛并获得第一名，负责创意、脚本与内容表达。</p></div></article>
+
+        <article class="card"><img src="/assets/film-qiufengqi.jpg" alt="秋风起"><div class="card-body"><div class="badges"><span class="badge">原创剧本</span><span class="badge">影艺节获奖</span></div><h3>《秋风起》</h3><p>原创剧本，获四川大学影视文化艺术节奖。用中文系的文字功底和影像语言讲一个完整故事。</p></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell footer"><span>© 2026 黄浩东（大头） · liebstch.com</span><span>持续做产品，也持续记录真实经验。</span></footer>
+</body>
+</html>
